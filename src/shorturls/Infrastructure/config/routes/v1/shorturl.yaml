@@ -1,0 +1,4 @@
+create_short_url:
+    path: /short-urls
+    controller: ShortUrls\Infrastructure\ShortUrls\CreateUrl
+    methods: POST

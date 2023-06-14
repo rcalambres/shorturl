@@ -1,0 +1,19 @@
+services:
+    _defaults:
+        autowire: true      # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+    # >>>> SHORT URLS ####
+    #### POST ####
+    ShortUrls\Application\ShortUrls\Create\GetShortUrlService:
+      tags:
+        - name: messenger.message_handler
+          bus: commad.bus
+          method: execute
+          handles: ShortUrls\Application\Base\Interfaces\ApplicationService
+    
+    #### ALIAS ####
+    ShortUrls\Application\Base\Interfaces\ApplicationService $shortUrlServices: '@ShortUrls\Application\ShortUrls\Create\GetShortUrlService'
+
+    ShortUrls\Domain\ShortUrl\ShortUrlRepository:
+      class: ShortUrls\Infrastructure\ShortUrl\Persistence\ApiShorUrlRepository

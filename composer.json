@@ -15,6 +15,11 @@
         "symfony/yaml": "6.3.*"
     },
     "require-dev": {
+        "mockery/mockery": "^1.6",
+        "phpunit/phpunit": "^9.5",
+        "symfony/browser-kit": "6.3.*",
+        "symfony/css-selector": "6.3.*",
+        "symfony/phpunit-bridge": "^6.3"
     },
     "config": {
         "allow-plugins": {
@@ -26,12 +31,13 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "App\\": "src/",
+            "ShortUrls\\": "src/shorturls/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "App\\Tests\\": "tests/"
+            "ShortUrls\\Tests\\": "tests/"
         }
     },
     "replace": {

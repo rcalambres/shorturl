@@ -3,7 +3,7 @@
 namespace ShortUrls\Application\Auth;
 
 use ShortUrls\Application\Base\Interfaces\AuthenticationService;
-use ShortUrls\Application\Domain\Stack\ParenthesisStack;
+use ShortUrls\Domain\Stack\ParenthesisStack;
 use ShortUrls\Domain\Stack\Exceptions\InvalidParenthesisStackFormatException;
 
 class AuthService implements AuthenticationService

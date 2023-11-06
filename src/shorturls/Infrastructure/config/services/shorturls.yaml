@@ -16,4 +16,4 @@ services:
     ShortUrls\Application\Base\Interfaces\ApplicationService $shortUrlServices: '@ShortUrls\Application\ShortUrls\Create\GetShortUrlService'
 
     ShortUrls\Domain\ShortUrl\ShortUrlRepository:
-      class: ShortUrls\Infrastructure\ShortUrl\Persistence\ApiShorUrlRepository
+      class: ShortUrls\Infrastructure\ShortUrl\Persistence\ApiShortUrlRepository

@@ -17,3 +17,4 @@ services:
 
     ShortUrls\Domain\ShortUrl\ShortUrlRepository:
       class: ShortUrls\Infrastructure\ShortUrl\Persistence\ApiShortUrlRepository
+

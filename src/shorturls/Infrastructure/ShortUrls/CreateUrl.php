@@ -10,11 +10,11 @@ class CreateUrl extends ShortUrlsController
 {
     public function __invoke(Request $request) : JsonResponse
     {
-        try{
+        /* try{
             parent::__invoke($request); // parent auth
         }catch(\Exception $e){
             return new JsonResponse(["error" => $e->getMessage()], 401);
-        }
+        } */
 
         try{
             $command = new ShortUrlRequest($this->getUrlParam($request));

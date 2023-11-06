@@ -12,13 +12,13 @@ abstract class ShortUrlsController extends AbstractController
 {
 
     public function __construct(
-        protected AuthenticationService $authServices,
+        //protected AuthenticationService $authServices,
         protected ApplicationService $shortUrlServices,
     )
     {
     }
 
-    public function __invoke(Request $request){
+    public function __invokea(Request $request){
         if (!$this->authServices->auth($this->getBearer($request))){
             throw new \Exception("Auth failure");
         }
